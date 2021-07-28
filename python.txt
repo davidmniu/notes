@@ -1,0 +1,5 @@
+List Comprehensions:
+	allows sequences to be build from other sequences:
+		squared_ints = [ e**2 for e in a_list if type(e) == types.IntType ]
+	In general, we have
+		[ "output expression" for "variable" in "input sequence" "optional predicate"]

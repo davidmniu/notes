@@ -1,0 +1,99 @@
+Disable touchpad:
+	xinput list // displays all input devices
+	xinput --disable [number] // get number of touchpad from previous command
+
+Get rid of beep:
+	sudo rmmod pcspkr // that's PC speaker
+
+Record voice with ffmpeg:
+	ffmpeg -f alsa -i hw:1 -t 10 out.wav
+		-f --> force input/output file format
+		-i --> input file url
+		-t --> time (seconds)
+		hw:1 --> hardware input number 1
+
+Convert files with ffmpeg:
+	ffmpeg -i video.mp4 -f mp3 -ab 192000 -vn music.mp3
+
+Pacman tips:
+	-Syu --> update & upgrade
+	-Ss [package name] --> query remote repositories for package
+	-Sc --> clean package cache
+	-Qs [package name] --> query system for package
+	-Ru [package name] --> remove package and dependecies
+	-Qtd --> unneeded dependencies
+	sudo paccache -r --> clean package cache
+	-Q --> list all install packages
+
+Inside ~/.config/dmenu-recent there are two text files called background and terminal. Edit the appropriate one in a text editor, and delete the line with your app's name. This will reset the dmenu app preference.
+
+To extract a .tgz file with tar you need to use,
+	tar -xvzf /path/to/yourfile.tgz
+
+To browse disk usage by folder:
+	ncdu
+
+To reload current vimrc i
+	While editing vimrc:
+		:so %
+	Otherwise:
+		:so $MYVIMRC
+
+start vsftpd:
+	sudo systemctl enable vsftpd
+	sudo systemctl start vsftpd
+
+To copy file to all directories within a directory:
+	for d in */; 
+	do cp file.txt "$d";
+	done
+
+grep: 
+	to recursive --> -r
+	to search all including hidden --> * .*
+	to find same lines between two files --> -f
+
+cut:
+	cut -d<char> --> delimiter, divide string by <char>
+	-f<num> --> get substring, 1-based index
+
+crontab:
+	crontab file must end with new line!
+	sudo systemctl start cron
+
+firefox:
+	to take advantage of free real estate, go to about:config and
+		layout.css.devPixelsPerPx
+		I like to set this to 1.5
+
+Recording:
+mpv /dev/video0 --> doesn't record, just gives raw output of webcam
+scrcpy --> connect to Android via USB, can display and control through keyboard/mouse
+
+KVM/QEMU:
+	sudo virsh net-autostart default
+	sudo virsh net-start default
+
+JPEG to PDF:
+	convert *.jpg pictures.pdf --> JPG to PDF
+	mogrify -rotate 90 *.jpg --> rotate cw, overwrites in place
+
+Vim:
+	]s --> search for the next misspelled word
+	:noh --> get rid fo search highlight
+
+LaTeX:
+	For bibtex, don't forget to run --> bibtex file.bib
+	tllocalmgr --> download LaTeX packages as Linux packages
+	Error in TeX Live – Font … not loadable: Metric (TFM) file not found	
+		--> install package ec, better install texlive-scheme-full
+
+Change Hostname:
+	hostnamectl set-hostname name
+
+Get X11/Wayland:
+	XDG_SESSION_TYPE
+
+i3:
+	i3status:
+		battery
