@@ -1,0 +1,13 @@
+Reading Papers:
+	Multiple passes
+		1) Title, abstract, figures
+		2) Intro, conclusions, figures, skim rest including related work
+		3) Read but skip math
+		4) Read whole thing but skip parts that don't make sense
+	Math:
+		Rederive from scratch
+	Code:
+		Download and run
+		Reimplement from scratch
+	Steady reading instead of short bursts
+

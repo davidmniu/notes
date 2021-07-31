@@ -1,0 +1,18 @@
+Terminology:
+	Hyperparameter:
+		parameter whose value is used to control the learning process, not derived via training
+	Pearson's r:
+		measure of linear correlation between two sets of data which always has a value between -1 and 1
+	Stratified Sampling:
+		selecting elements in test set that are representative of entire population
+Pandas:
+	Dataframe:
+		head() -- top x rows
+		info() -- description of data
+		describe() -- summary of numerical attributes	
+		hist() -- makes histogram of columns, calls matplotlib.pyplot.hist()
+		plot() -- self explanatory; kinds include scatter, line, hist, etc.
+		corr() -- Pearson's r between every pair of attributes
+	Series:
+		value_counts() -- series containing counts of unique values
+

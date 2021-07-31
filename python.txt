@@ -3,3 +3,17 @@ List Comprehensions:
 		squared_ints = [ e**2 for e in a_list if type(e) == types.IntType ]
 	In general, we have
 		[ "output expression" for "variable" in "input sequence" "optional predicate"]
+
+String Manipulation:
+	format()
+		add curly brackets as placeholders
+		price = 49
+		txt = "The price is {} dollars"
+		print(txt.format(price))
+
+Simultaneous Assignment:
+	var_name1, var_name2 = value1, value2
+
+Argument Assignment:
+	Very silly, but if there are default arguments, you can select values for specific arguments
+		by referring to their names: for example, hist(bins=50, figsize=(20,15))
